@@ -39,16 +39,106 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/swOnOff"
+        android:id="@+id/switch_custom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
         android:thumb="@drawable/switch_thumb"
         app:track="@drawable/switch_track"
         app:thumbTint="@null"
         app:trackTint="@null"
-        android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintTop_toBottomOf="@id/iv_mid_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/disconnected"
+        android:textSize="@dimen/_16ssp"
+        android:fontFamily="@font/neue_machina_ultrabold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/switch_custom"
+        app:layout_constraintEnd_toEndOf="@id/switch_custom"
+        app:layout_constraintTop_toBottomOf="@id/switch_custom"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_private"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/your_internet_is_not_private"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/neue_machina_regular"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/switch_custom"
+        app:layout_constraintEnd_toEndOf="@id/switch_custom"
+        app:layout_constraintTop_toBottomOf="@id/tv_status"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_default_dns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardBackgroundColor="#333333"
+        app:layout_constraintTop_toBottomOf="@id/tv_private"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_icon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Google DNS"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/neue_machina_ultrabold"
+                    android:textSize="@dimen/_10ssp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20ms | DoT/DoH"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/neue_machina_regular"
+                    android:textSize="@dimen/_8ssp"
+                    android:drawableStart="@drawable/network_icon"
+                    android:drawablePadding="@dimen/_5sdp"/>
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/forward_icon"/>
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

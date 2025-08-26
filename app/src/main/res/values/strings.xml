@@ -3,4 +3,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dns_changer">Dns Changer</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connected">Connected</string>
+    <string name="your_internet_is_not_private">Your Internet is not private.</string>
+    <string name="your_internet_is_private">Your Internet is private.</string>
+    <string name="view"><u>View</u></string>
+    <string name="about_us">About us</string>
+    <string name="app_version">App version</string>
+    <string name="place_holder">---</string>
+    <string name="privacy_information">Privacy information</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="connect">Connect</string>
+    <string name="google_dns">Google DNS</string>
+
 </resources>

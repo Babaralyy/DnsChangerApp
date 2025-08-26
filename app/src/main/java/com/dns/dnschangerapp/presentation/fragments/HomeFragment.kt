@@ -12,6 +12,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.dns.dnschangerapp.R
 import com.dns.dnschangerapp.databinding.FragmentHomeBinding
 import com.dns.dnschangerapp.presentation.vpn.DnsVpnService
+import com.dns.dnschangerapp.utils.extensions.navigateTo
+import com.dns.dnschangerapp.utils.extensions.setDebounceClickListener
 
 
 class HomeFragment : Fragment() {
@@ -39,6 +41,18 @@ class HomeFragment : Fragment() {
 
     private fun inIt() {
         prepareAndStart("google")
+        clickListeners()
+    }
+
+    private fun clickListeners() {
+        binding.apply {
+            ivTopSettings.setDebounceClickListener {
+                navigateTo(R.id.homeFragment, R.id.action_homeFragment_to_settingsFragment)
+            }
+            mcvDefaultDns.setDebounceClickListener {
+                navigateTo(R.id.homeFragment, R.id.action_homeFragment_to_changeDnsFragment)
+            }
+        }
     }
 
     private fun prepareAndStart(dnsId: String) {

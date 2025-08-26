@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragments.ChangeDnsFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/app_back"
+        android:scaleType="centerCrop"
+        android:paddingHorizontal="-20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:cardCornerRadius="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/word_border_icon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/google_dns"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_ultrabold"
+                        android:textSize="@dimen/_10ssp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20ms | DoT/DoH"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:textSize="@dimen/_8ssp"
+                        android:drawableStart="@drawable/network_icon"
+                        android:drawablePadding="@dimen/_5sdp"/>
+                </LinearLayout>
+
+              <com.google.android.material.card.MaterialCardView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:cardCornerRadius="@dimen/_2sdp"
+                  app:strokeWidth="@dimen/_1sdp"
+                  app:strokeColor="@color/white"
+                  app:cardBackgroundColor="@android:color/transparent">
+
+                  <com.google.android.material.textview.MaterialTextView
+                      android:id="@+id/tv_google"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingHorizontal="@dimen/_8sdp"
+                      android:paddingVertical="@dimen/_5sdp"
+                      android:text="@string/connect"
+                      android:textColor="@color/white"
+                      android:fontFamily="@font/neue_machina_regular"
+                      android:textSize="@dimen/_10sdp"/>
+              </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:cardCornerRadius="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/word_border_icon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cloudflare DNS"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_ultrabold"
+                        android:textSize="@dimen/_10ssp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20ms | DoT/DoH"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:textSize="@dimen/_8ssp"
+                        android:drawableStart="@drawable/network_icon"
+                        android:drawablePadding="@dimen/_5sdp"/>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:strokeWidth="@dimen/_1sdp"
+                    app:strokeColor="@color/white"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_cloud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/connect"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:textSize="@dimen/_10sdp"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:cardCornerRadius="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/word_border_icon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AdGuard DNS"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_ultrabold"
+                        android:textSize="@dimen/_10ssp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20ms | DoT/DoH"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:textSize="@dimen/_8ssp"
+                        android:drawableStart="@drawable/network_icon"
+                        android:drawablePadding="@dimen/_5sdp"/>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:strokeWidth="@dimen/_1sdp"
+                    app:strokeColor="@color/white"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_adguard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/connect"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:textSize="@dimen/_10sdp"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:cardCornerRadius="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/word_border_icon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open DNS"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_ultrabold"
+                        android:textSize="@dimen/_10ssp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20ms | DoT/DoH"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:textSize="@dimen/_8ssp"
+                        android:drawableStart="@drawable/network_icon"
+                        android:drawablePadding="@dimen/_5sdp"/>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:strokeWidth="@dimen/_1sdp"
+                    app:strokeColor="@color/white"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/connect"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:textSize="@dimen/_10sdp"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

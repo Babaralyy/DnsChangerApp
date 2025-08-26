@@ -18,5 +18,22 @@
         android:id="@+id/homeFragment"
         android:name="com.dns.dnschangerapp.presentation.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_changeDnsFragment"
+            app:destination="@id/changeDnsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dns.dnschangerapp.presentation.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/changeDnsFragment"
+        android:name="com.dns.dnschangerapp.presentation.fragments.ChangeDnsFragment"
+        android:label="fragment_change_dns"
+        tools:layout="@layout/fragment_change_dns" />
 </navigation>
