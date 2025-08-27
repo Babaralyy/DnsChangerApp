@@ -4,9 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
     tools:context=".presentation.fragments.HomeFragment">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_back"
+        android:scaleType="fitXY" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_top_icon"
@@ -112,6 +116,7 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_dns_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Google DNS"
@@ -120,9 +125,10 @@
                     android:textSize="@dimen/_10ssp"/>
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_dns_ping"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20ms | DoT/DoH"
+                    android:text="21ms | DoT/DoH"
                     android:textColor="@color/white"
                     android:fontFamily="@font/neue_machina_regular"
                     android:textSize="@dimen/_8ssp"

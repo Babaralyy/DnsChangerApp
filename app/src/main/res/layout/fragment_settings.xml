@@ -1,118 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black"
-    android:orientation="vertical"
     tools:context=".presentation.fragments.SettingsFragment">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/app_back"
+        android:scaleType="centerCrop"
+        android:paddingHorizontal="-20dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_50sdp"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/about_us"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"/>
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:orientation="horizontal">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/view"
-            android:gravity="end|center"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_9ssp"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/about_us"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_about"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/view"
+                android:gravity="end|center"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_version"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/place_holder"
+                android:gravity="end|center"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/privacy_information"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/view"
+                android:gravity="end|center"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/terms_and_conditions"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/view"
+                android:gravity="end|center"
+                android:fontFamily="@font/neue_machina_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"/>
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:orientation="horizontal">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/app_version"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/place_holder"
-            android:gravity="end|center"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_9ssp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/privacy_information"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/view"
-            android:gravity="end|center"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_9ssp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/terms_and_conditions"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/view"
-            android:gravity="end|center"
-            android:fontFamily="@font/neue_machina_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_9ssp"/>
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

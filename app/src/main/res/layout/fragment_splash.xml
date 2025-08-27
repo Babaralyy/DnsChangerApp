@@ -4,9 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
     tools:context=".presentation.fragments.SplashFragment">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/app_back"
+        android:scaleType="centerCrop"
+        android:paddingHorizontal="-20dp"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="@dimen/_180sdp"

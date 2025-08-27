@@ -30,10 +30,35 @@
         android:id="@+id/settingsFragment"
         android:name="com.dns.dnschangerapp.presentation.fragments.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/changeDnsFragment"
         android:name="com.dns.dnschangerapp.presentation.fragments.ChangeDnsFragment"
         android:label="fragment_change_dns"
         tools:layout="@layout/fragment_change_dns" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.dns.dnschangerapp.presentation.fragments.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.dns.dnschangerapp.presentation.fragments.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.dns.dnschangerapp.presentation.fragments.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
 </navigation>

@@ -60,9 +60,10 @@
                         android:textSize="@dimen/_10ssp"/>
 
                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_google_ping"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20ms | DoT/DoH"
+                        android:text="21ms | DoT/DoH"
                         android:textColor="@color/white"
                         android:fontFamily="@font/neue_machina_regular"
                         android:textSize="@dimen/_8ssp"
@@ -135,14 +136,15 @@
                         android:textSize="@dimen/_10ssp"/>
 
                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_cloud_ping"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20ms | DoT/DoH"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/neue_machina_regular"
-                        android:textSize="@dimen/_8ssp"
                         android:drawableStart="@drawable/network_icon"
-                        android:drawablePadding="@dimen/_5sdp"/>
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/neue_machina_regular"
+                        android:text="19ms | DoT/DoH"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
                 </LinearLayout>
 
                 <com.google.android.material.card.MaterialCardView
@@ -210,9 +212,10 @@
                         android:textSize="@dimen/_10ssp"/>
 
                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_ad_ping"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20ms | DoT/DoH"
+                        android:text="25ms | DoT/DoH"
                         android:textColor="@color/white"
                         android:fontFamily="@font/neue_machina_regular"
                         android:textSize="@dimen/_8ssp"
@@ -284,9 +287,10 @@
                         android:textSize="@dimen/_10ssp"/>
 
                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_open_ping"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20ms | DoT/DoH"
+                        android:text="16ms | DoT/DoH"
                         android:textColor="@color/white"
                         android:fontFamily="@font/neue_machina_regular"
                         android:textSize="@dimen/_8ssp"

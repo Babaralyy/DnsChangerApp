@@ -21,12 +21,16 @@ import java.io.IOException
 class DnsVpnService : VpnService() {
 
     companion object {
+        private var isRunning = false
+        private var activeDnsId: String? = null
         const val ACTION_START = "com.example.dnschanger.action.START"
         const val ACTION_STOP = "com.example.dnschanger.action.STOP"
         const val EXTRA_DNS_ID = "extra_dns_id"
 
         private const val NOTIF_CHANNEL_ID = "dns_vpn_channel"
         private const val NOTIF_ID = 42
+        fun isServiceRunning(): Boolean = isRunning
+        fun getActiveDnsId(): String? = activeDnsId
 
         fun start(context: Context, dnsId: String) {
             val i = Intent(context, DnsVpnService::class.java).apply {
@@ -53,6 +57,7 @@ class DnsVpnService : VpnService() {
     override fun onCreate() {
         super.onCreate()
         createNotificationChannel()
+        isRunning = true
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -69,6 +74,7 @@ class DnsVpnService : VpnService() {
     }
 
     private fun startVpn(profile: DnsProfile) {
+        activeDnsId = profile.id
         currentProfile = profile
         serviceScope?.cancel()
         serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
@@ -133,12 +139,16 @@ class DnsVpnService : VpnService() {
         serviceScope = null
         vpnInterface?.closeSilently()
         vpnInterface = null
+        isRunning = false
+        activeDnsId = null
         stopForeground(STOP_FOREGROUND_REMOVE)
         stopSelf()
     }
 
     override fun onDestroy() {
         stopVpn()
+        isRunning = false
+        activeDnsId = null
         super.onDestroy()
     }
 
