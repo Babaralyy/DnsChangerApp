@@ -93,9 +93,10 @@ class DnsVpnService : VpnService() {
                 // IPv6 (ULA example)
                 builder.addAddress("fd66:66:66::1", 128)
 
+
                 // Route all traffic so system uses our DNS (no packet processing needed)
-                builder.addRoute("0.0.0.0", 0)
-                builder.addRoute("::", 0)
+//                builder.addRoute("0.0.0.0", 0)
+//                builder.addRoute("::", 0)
 
                 // Set DNS servers
                 profile.ipv4.forEach { builder.addDnsServer(it) }
